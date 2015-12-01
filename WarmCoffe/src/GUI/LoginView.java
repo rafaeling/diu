@@ -7,7 +7,7 @@ package GUI;
 
 /**
  *
- * @author rafae
+ * @author rafaeing
  */
 public abstract class LoginView extends javax.swing.JFrame {
 
@@ -21,6 +21,7 @@ public abstract class LoginView extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
+    
     protected abstract boolean login(String username);
     
     protected abstract void showHelpGUI();
@@ -287,7 +288,7 @@ public abstract class LoginView extends javax.swing.JFrame {
                 .addGap(15, 15, 15))
         );
 
-        jMenu1.setText("Warm Coffe");
+        jMenu1.setText("Warm Coffee");
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Herramientas");
@@ -319,6 +320,7 @@ public abstract class LoginView extends javax.swing.JFrame {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
+       
     }//GEN-LAST:event_loginButtonActionPerformed
 
     
