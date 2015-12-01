@@ -9,7 +9,7 @@ package GUI;
  *
  * @author rafae
  */
-public class LoginView extends javax.swing.JFrame {
+public abstract class LoginView extends javax.swing.JFrame {
 
     /**
      * Creates new form LoginView
@@ -21,6 +21,17 @@ public class LoginView extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
+    protected abstract boolean login(String username);
+    
+    protected abstract void showHelpGUI();
+    
+    protected void disableLogin(){
+    	loginButton.setEnabled(false);
+    }
+    private void sendLogin() {
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,7 +45,7 @@ public class LoginView extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         user = new javax.swing.JTextField();
         jPasswordField1 = new javax.swing.JPasswordField();
-        jButton2 = new javax.swing.JButton();
+        loginButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -82,14 +93,20 @@ public class LoginView extends javax.swing.JFrame {
         jPasswordField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPasswordField1.setText("Contraseña");
         jPasswordField1.setToolTipText("fsdf");
+        jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
-        jButton2.setText("Iniciar sesión");
+        loginButton.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        loginButton.setText("Iniciar sesión");
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -100,7 +117,7 @@ public class LoginView extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(user)
                     .addComponent(jPasswordField1)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))
+                    .addComponent(loginButton, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -111,7 +128,7 @@ public class LoginView extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
-                .addComponent(jButton2)
+                .addComponent(loginButton)
                 .addGap(15, 15, 15))
         );
 
@@ -300,16 +317,15 @@ public class LoginView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_userActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loginButtonActionPerformed
+
     
+    
+   /*
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -328,19 +344,19 @@ public class LoginView extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new LoginView().setVisible(true);
             }
         });
     }
+*/
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.Box.Filler filler1;
     private javax.swing.Box.Filler filler2;
     private javax.swing.Box.Filler filler3;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -356,6 +372,7 @@ public class LoginView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JButton loginButton;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }
