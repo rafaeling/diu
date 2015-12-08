@@ -9,13 +9,17 @@ package warmcoffe;
  *
  * @author rafae
  */
-public class WarmCoffe {
-
-    /**
-     * @param args the command line arguments
-     */
+public class WarmCoffee {
     public static void main(String[] args) {
-        // TODO code application logic here
+    	Users users=new Users();
+    	users.addUser("arthur","dontpanic");
+    	
+    	Login loginWindow=new Login(users);
+    	//MainMenu menuWindow=new MainMenu();
+    	//menuWindow.setVisible(true);
+        loginWindow.setVisible(true);
+        
+
     }
     
 }
