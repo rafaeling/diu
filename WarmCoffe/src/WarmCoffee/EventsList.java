@@ -13,8 +13,21 @@ import GUI.EventsListView;
  */
 public class EventsList extends EventsListView{
     
-    public EventsList() {
+    String username;
+    
+    public EventsList(String name) {
         super();
+        this.username = name;
+    }
+    
+    @Override
+    protected void back() {
+        
+        MainMenu menuWindow = new MainMenu(username);
+        menuWindow.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+        
     }
     
 }
