@@ -1,5 +1,6 @@
 package WarmCoffee;
 
+import GUI.LoginView;
 import GUI.MainMenuView;
 
 public class MainMenu extends MainMenuView {
@@ -12,7 +13,7 @@ public class MainMenu extends MainMenuView {
     @Override
     protected void showEvents() {
         
-        EventsList s = new EventsList();
+        EventsList s = new EventsList(username);
         s.setVisible(true);
         this.setVisible(false);
         this.dispose();
@@ -21,12 +22,20 @@ public class MainMenu extends MainMenuView {
 
     @Override
     protected void showSectors() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        SectorsList s = new SectorsList();
+        s.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
     }
 
     @Override
     protected void exit() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        Users n = new Users();
+        Login s = new Login(n);
+        s.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
     }
 
 }
