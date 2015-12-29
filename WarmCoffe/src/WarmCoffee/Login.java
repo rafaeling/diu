@@ -1,6 +1,8 @@
 package WarmCoffee;
 
+import GUI.CreateAccountView;
 import GUI.LoginView;
+import java.awt.event.MouseAdapter;
 
 public class Login extends LoginView {
     Users users;
@@ -13,8 +15,7 @@ public class Login extends LoginView {
     protected boolean login(String username,String password) {
         System.out.println(username);
         if(users.checkUser(username,password)) {
-            System.out.println("Hello");
-            MainMenu menuWindow=new MainMenu(username);
+            MainMenu menuWindow = new MainMenu(username);
             menuWindow.setVisible(true);
             this.setVisible(false);
             this.dispose();
@@ -22,10 +23,12 @@ public class Login extends LoginView {
         }
         else return false;
     }
-
+    
     @Override
-    protected void showHelpGUI() {
-        // TODO Auto-generated method stub
+    protected void createAccount() {
+        CreateAccount acc = new CreateAccount();
+        acc.setVisible(true);
     }
+ 
 
 }
