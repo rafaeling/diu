@@ -7,7 +7,7 @@ package GUI;
 
 /**
  *
- * @author rafaeing
+ * @author rafaeling
  */
 public abstract class LoginView extends javax.swing.JFrame {
 

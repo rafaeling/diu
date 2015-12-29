@@ -7,7 +7,7 @@ package WarmCoffee;
 
 /**
  *
- * @author rafae
+ * @author rafaeling
  */
 public class WarmCoffee {
     public static void main(String[] args) {

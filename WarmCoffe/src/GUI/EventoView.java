@@ -7,7 +7,7 @@ package GUI;
 
 /**
  *
- * @author rafae
+ * @author rafaeling
  */
 public class EventoView extends javax.swing.JFrame {
 

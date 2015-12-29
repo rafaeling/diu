@@ -11,7 +11,12 @@ public class MainMenu extends MainMenuView {
 
     @Override
     protected void showEvents() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        EventsList s = new EventsList();
+        s.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+        
     }
 
     @Override
