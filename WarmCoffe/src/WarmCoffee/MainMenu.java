@@ -15,8 +15,6 @@ public class MainMenu extends MainMenuView {
         
         EventsList s = new EventsList(username);
         s.setVisible(true);
-        this.setVisible(false);
-        this.dispose();
         
     }
 

@@ -1,6 +1,7 @@
 package WarmCoffee;
 
 import GUI.CreateAccountView;
+import GUI.ErrorLogin;
 import GUI.LoginView;
 import java.awt.event.MouseAdapter;
 
@@ -21,7 +22,17 @@ public class Login extends LoginView {
             this.dispose();
             return true;
         }
-        else return false;
+        else{ 
+            
+            ErrorLogin menuWindow = new ErrorLogin();
+            menuWindow.setVisible(true);
+            
+            
+            
+            this.setVisible(true);
+            
+            return false;
+        }
     }
     
     @Override
