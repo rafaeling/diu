@@ -27,8 +27,6 @@ public class Login extends LoginView {
             ErrorLogin menuWindow = new ErrorLogin();
             menuWindow.setVisible(true);
             
-            
-            
             this.setVisible(true);
             
             return false;

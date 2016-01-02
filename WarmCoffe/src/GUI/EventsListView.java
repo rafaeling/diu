@@ -16,7 +16,7 @@ public abstract class EventsListView extends javax.swing.JFrame {
      */
     public EventsListView() {
         initComponents();
-        
+        this.setLocationRelativeTo(null);
         
     }
     

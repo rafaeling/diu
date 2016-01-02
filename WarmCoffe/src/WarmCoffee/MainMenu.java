@@ -1,5 +1,6 @@
 package WarmCoffee;
 
+import GUI.CreateEvent;
 import GUI.LoginView;
 import GUI.MainMenuView;
 
@@ -15,7 +16,8 @@ public class MainMenu extends MainMenuView {
         
         EventsList s = new EventsList(username);
         s.setVisible(true);
-        
+        this.setVisible(false);
+        this.dispose();
     }
 
     @Override
@@ -34,6 +36,30 @@ public class MainMenu extends MainMenuView {
         s.setVisible(true);
         this.setVisible(false);
         this.dispose();
+    }
+
+    @Override
+    protected void showMyEvents() {
+        EventUserList s = new EventUserList();
+        s.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    
+    }
+
+    @Override
+    protected void showMySectors() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected void createEvent() {
+    
+        CreateEvent s = new CreateEvent();
+        s.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
+    
     }
 
 }
