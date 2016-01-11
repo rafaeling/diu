@@ -26,5 +26,16 @@ public class SectorsList extends SectorsListView{
         
         this.setVisible(false);
     }
+
+    @Override
+    protected void reservar() {
+        
+    
+    }
+
+    @Override
+    protected void buscar() {
+    
+    }
     
 }
