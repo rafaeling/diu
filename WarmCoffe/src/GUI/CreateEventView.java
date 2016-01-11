@@ -67,10 +67,6 @@ public abstract class CreateEventView extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setText("jTextField1");
-
-        jTextField2.setText("jTextField2");
-
         jTextField3.setText("jTextField3");
 
         jTextField4.setText("jTextField4");
