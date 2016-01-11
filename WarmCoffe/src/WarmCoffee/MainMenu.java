@@ -7,18 +7,20 @@ import GUI.MainMenuView;
 public class MainMenu extends MainMenuView {
     String username;
     Users users;
+    Events events=new Events();
     public MainMenu(String username,Users users) {
         super();
         this.username=username;
         this.users=users;
-        changeUsername(username);
+        User user=users.getUser(username);
+        changeUsername(username,user.email);
         this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     }
 
     @Override
     protected void showEvents() {
         
-        EventsList s = new EventsList(username);
+        EventsList s = new EventsList(username,events);
         s.setVisible(true);
     }
 

@@ -14,10 +14,12 @@ import GUI.EventsListView;
 public class EventsList extends EventsListView{
     
     String username;
+    Events events;
     
-    public EventsList(String name) {
+    public EventsList(String name,Events events) {
         super();
         this.username = name;
+        this.events=events;
     }
     
     @Override

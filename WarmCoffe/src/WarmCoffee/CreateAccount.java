@@ -31,7 +31,7 @@ public class CreateAccount extends CreateAccountView {
         if (!pass1.equals(pass2) || mail.isEmpty() || name.isEmpty() || pass1.isEmpty()) {
             ErrorLogin menuWindow = new ErrorLogin();
             menuWindow.setVisible(true);
-        } else if (users.addUser(name, pass1) == false) {
+        } else if (users.addUser(name, pass1,mail) == false) {
             ErrorLogin menuWindow = new ErrorLogin();
             menuWindow.setVisible(true);
 
