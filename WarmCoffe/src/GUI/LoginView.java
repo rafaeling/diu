@@ -85,7 +85,6 @@ public abstract class LoginView extends javax.swing.JFrame {
         user.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         user.setForeground(new java.awt.Color(255, 255, 255));
         user.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        user.setText("Nombre de usuario...");
         user.setToolTipText("User");
         user.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         user.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

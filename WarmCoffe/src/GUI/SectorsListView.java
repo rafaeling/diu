@@ -17,6 +17,8 @@ public abstract class SectorsListView extends javax.swing.JFrame {
     public SectorsListView() {
         initComponents();
         this.setLocationRelativeTo(null);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        
     }
 
     

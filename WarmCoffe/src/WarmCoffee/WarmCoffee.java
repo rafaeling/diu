@@ -12,7 +12,7 @@ package WarmCoffee;
 public class WarmCoffee {
     public static void main(String[] args) {
         Users users=new Users();
-        users.addUser("arthur","dontpanic");
+        users.addUser("","");
         Login loginWindow=new Login(users);
         //MainMenu menuWindow=new MainMenu();
         //menuWindow.setVisible(true);

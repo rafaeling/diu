@@ -23,5 +23,10 @@ public class ReservationUserList extends ReservationUserListView{
         ModifyReservation menuWindow = new ModifyReservation();
         menuWindow.setVisible(true);
     }
+
+    @Override
+    protected void cancelReservation() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

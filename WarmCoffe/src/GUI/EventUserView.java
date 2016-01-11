@@ -5,20 +5,29 @@
  */
 package GUI;
 
+import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 /**
  *
  * @author rafae
  */
 public class EventUserView extends javax.swing.JPanel {
 
+    static boolean ok = false;
+    
+    boolean selected = false;
+    Color n = new Color(135,103,92);
+    Color n1 = new Color(135,135,135);
     /**
      * Creates new form EventUserView
      */
     public EventUserView() {
         initComponents();
     }
-
-    
+       
+        
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,6 +46,11 @@ public class EventUserView extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(135, 135, 135));
+        jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel1MouseClicked(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Yu Gothic Light", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -111,6 +125,32 @@ public class EventUserView extends javax.swing.JPanel {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
+        
+        if(ok){
+            if(selected){
+                this.jPanel1.setBackground(n1);
+                this.jPanel1.repaint();
+                selected = false;
+                ok = false;
+            }
+        }else
+        {
+           if(selected){
+                this.jPanel1.setBackground(n1);
+                this.jPanel1.repaint();
+                selected = false;
+                ok = false;
+            }
+            else{
+                this.jPanel1.setBackground(n);
+                this.jPanel1.repaint();
+                selected = true;
+                ok = true;
+            }
+        }
+    }//GEN-LAST:event_jPanel1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

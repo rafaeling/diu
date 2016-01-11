@@ -22,5 +22,17 @@ public class CreateAccount extends CreateAccountView{
     
         this.setVisible(false);
     }
+
+    @Override
+    protected void next() {
+    
+        
+        
+    }
+
+    @Override
+    protected void cancel() {
+        this.setVisible(false);
+    }
     
 }

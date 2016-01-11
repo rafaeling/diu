@@ -33,6 +33,7 @@ public class ErrorLogin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
         setBackground(new java.awt.Color(135, 135, 135));
 
         jPanel1.setBackground(new java.awt.Color(135, 135, 135));

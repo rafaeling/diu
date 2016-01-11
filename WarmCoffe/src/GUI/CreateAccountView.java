@@ -21,9 +21,13 @@ public abstract class CreateAccountView extends javax.swing.JFrame {
     public CreateAccountView() {
         initComponents();
         this.setLocationRelativeTo(null);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        
     }
 
     protected abstract void back();
+    protected abstract void next();
+    protected abstract void cancel();
     
     /**
      * This method is called from within the constructor to initialize the form.

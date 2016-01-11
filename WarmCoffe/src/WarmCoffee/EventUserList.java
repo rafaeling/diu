@@ -29,6 +29,7 @@ public class EventUserList extends EventsUserListView{
     protected void modifyEvent() {
         ModifyEvent s = new ModifyEvent();
         s.setVisible(true);
+        
     }
     
 }
