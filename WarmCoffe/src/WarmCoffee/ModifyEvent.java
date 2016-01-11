@@ -20,8 +20,9 @@ public class ModifyEvent extends ModifyEventView{
     }
 
     @Override
-    protected void SaveChanges() {
-        this.setVisible(false);
+    protected void SaveChanges(String text, String text0, String text1, String text2, String text3) {
+      
     }
+
     
 }

@@ -19,7 +19,7 @@ public class Login extends LoginView {
     protected boolean login(String username,String password) {
         System.out.println(username);
         if(users.checkUser(username,password)) {
-            MainMenu menuWindow = new MainMenu(username);
+            MainMenu menuWindow = new MainMenu(username,this.users);
             menuWindow.setVisible(true);
             this.setVisible(false);
             return true;
@@ -38,7 +38,7 @@ public class Login extends LoginView {
     
     @Override
     protected void createAccount() {
-        CreateAccount acc = new CreateAccount();
+        CreateAccount acc = new CreateAccount(users);
         acc.setVisible(true);
     }
  

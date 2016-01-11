@@ -7,15 +7,13 @@ package WarmCoffee;
 
 /**
  *
- * @author rafaeling
+ * @author rafaeling,andrés ortiz
  */
 public class WarmCoffee {
     public static void main(String[] args) {
         Users users=new Users();
-        users.addUser("","");
+        users.addUser("arthur","dontpanic"); //usuario de prueba
         Login loginWindow=new Login(users);
-        //MainMenu menuWindow=new MainMenu();
-        //menuWindow.setVisible(true);
         loginWindow.setVisible(true);
     }
 

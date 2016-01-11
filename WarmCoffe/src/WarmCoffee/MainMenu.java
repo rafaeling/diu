@@ -6,9 +6,12 @@ import GUI.MainMenuView;
 
 public class MainMenu extends MainMenuView {
     String username;
-    public MainMenu(String username) {
+    Users users;
+    public MainMenu(String username,Users users) {
         super();
         this.username=username;
+        this.users=users;
+        changeUsername(username);
         this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     }
 

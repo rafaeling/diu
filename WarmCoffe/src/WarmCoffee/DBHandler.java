@@ -1,4 +1,4 @@
-package WarmCoffee;
+/*package WarmCoffee;
 import java.sql.*;
 
 
@@ -112,7 +112,7 @@ public class DBHandler {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-	}*/
+	}
 	
 	//Not parametrized
 	public void sendQuery(String sqlQuery){
@@ -165,4 +165,4 @@ public class DBHandler {
 	 }
 	 
 	
-}
+}*/

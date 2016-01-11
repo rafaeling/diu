@@ -20,7 +20,10 @@ public abstract class MainMenuView extends javax.swing.JFrame {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
         jButton7.setBackground(new Color(204,204,255));
-        jButton7.setBorderPainted(false);
+        jButton7.setBorderPainted(false);   
+    }
+    protected void changeUsername(String name){
+        username.setText(name);
         
     }
 
@@ -61,7 +64,7 @@ public abstract class MainMenuView extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        username = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -116,7 +119,6 @@ public abstract class MainMenuView extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Yu Gothic Light", 0, 12)); // NOI18N
         jButton4.setText("Modificar");
-        jButton4.setOpaque(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -127,7 +129,7 @@ public abstract class MainMenuView extends javax.swing.JFrame {
         jButton7.setText("Añadir Foto");
         jButton7.setBorderPainted(false);
 
-        jLabel7.setText("Rafa");
+        username.setText("Rafa");
 
         jLabel8.setText("rafaelingugr@gmail.com");
 
@@ -156,7 +158,7 @@ public abstract class MainMenuView extends javax.swing.JFrame {
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7)))))
+                                .addComponent(username)))))
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
@@ -168,7 +170,7 @@ public abstract class MainMenuView extends javax.swing.JFrame {
                         .addGap(7, 7, 7)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(jLabel7))
+                            .addComponent(username))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
@@ -187,7 +189,6 @@ public abstract class MainMenuView extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 20)); // NOI18N
         jButton1.setText("Eventos");
-        jButton1.setOpaque(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -196,7 +197,6 @@ public abstract class MainMenuView extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Yu Gothic Light", 0, 20)); // NOI18N
         jButton2.setText("Sectores");
-        jButton2.setOpaque(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -205,7 +205,6 @@ public abstract class MainMenuView extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Yu Gothic Light", 0, 20)); // NOI18N
         jButton3.setText("Salir");
-        jButton3.setOpaque(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -310,7 +309,6 @@ public abstract class MainMenuView extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Yu Gothic Light", 0, 12)); // NOI18N
         jButton6.setText("Crear Evento");
-        jButton6.setOpaque(false);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -399,14 +397,13 @@ public abstract class MainMenuView extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         jPanel11.setBackground(new java.awt.Color(204, 204, 255));
 
         jButton5.setFont(new java.awt.Font("Yu Gothic Light", 0, 12)); // NOI18N
         jButton5.setText("Ver Reservas");
-        jButton5.setOpaque(false);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -573,7 +570,6 @@ public abstract class MainMenuView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
@@ -598,5 +594,6 @@ public abstract class MainMenuView extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JLabel username;
     // End of variables declaration//GEN-END:variables
 }
