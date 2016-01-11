@@ -5,30 +5,31 @@
  */
 package WarmCoffee;
 
-import GUI.EventsUserListView;
+import GUI.CreateEventView;
 
 /**
  *
  * @author rafae
  */
-public class EventUserList extends EventsUserListView{
-    
-    public EventUserList()
+public class CreateEvent extends CreateEventView{
+
+    CreateEvent()
     {
-    
         super();
+    }
+    
+    @Override
+    protected void createEvent() {
+    
+        
         
     }
 
     @Override
     protected void back() {
+    
         this.setVisible(false);
-    }
-
-    @Override
-    protected void modifyEvent() {
-        ModifyEvent s = new ModifyEvent();
-        s.setVisible(true);
+        
     }
     
 }

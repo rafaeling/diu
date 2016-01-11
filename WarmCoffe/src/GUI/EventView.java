@@ -42,10 +42,15 @@ public class EventView extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(135, 135, 135));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Nombre:");
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Descripción:");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Plazas Ofertadas:");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -61,6 +66,7 @@ public class EventView extends javax.swing.JPanel {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Sector evento:");
 
         jLabel5.setText("Evento 1");
@@ -71,13 +77,16 @@ public class EventView extends javax.swing.JPanel {
 
         jLabel8.setText("Sala pequeña");
 
+        jButton1.setFont(new java.awt.Font("Yu Gothic Light", 0, 12)); // NOI18N
         jButton1.setText("Apuntarse");
+        jButton1.setBorderPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Plazas restantes:");
 
         jLabel10.setText("1");

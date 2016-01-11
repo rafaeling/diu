@@ -150,7 +150,7 @@ public abstract class LoginView extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("en tu cuenta de WarmCoffe");
+        jLabel3.setText("en tu cuenta de WarmCoffee");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -180,7 +180,7 @@ public abstract class LoginView extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Yu Gothic Light", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Warm Coffe");
+        jLabel1.setText("Warm Coffee");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);

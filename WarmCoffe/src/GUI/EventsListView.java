@@ -36,6 +36,7 @@ public abstract class EventsListView extends javax.swing.JFrame {
         jToggleButton1 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(135, 135, 135));
 
         jToggleButton1.setText("Atrás");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -75,6 +76,7 @@ public abstract class EventsListView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        this.setVisible(false);
         this.back();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 

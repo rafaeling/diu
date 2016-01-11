@@ -13,9 +13,18 @@ import GUI.SectorsListView;
  */
 public class SectorsList extends SectorsListView{
     
+    String username;
+    
     public SectorsList()
     {
         super();
+        this.username = "";
+    }
+
+    @Override
+    protected void back() {
+        
+        this.setVisible(false);
     }
     
 }

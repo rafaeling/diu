@@ -23,6 +23,8 @@ public abstract class CreateAccountView extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
 
+    protected abstract void back();
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -79,6 +81,12 @@ public abstract class CreateAccountView extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Yu Gothic Light", 0, 14)); // NOI18N
         jButton1.setText("Atrás");
+        jButton1.setBorderPainted(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setFont(new java.awt.Font("Yu Gothic Light", 0, 14)); // NOI18N
         jButton2.setText("Siguiente");
@@ -262,6 +270,10 @@ public abstract class CreateAccountView extends javax.swing.JFrame {
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.back();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     
 

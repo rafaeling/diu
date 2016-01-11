@@ -5,30 +5,27 @@
  */
 package WarmCoffee;
 
-import GUI.EventsUserListView;
+import GUI.ModifyProfileView;
 
 /**
  *
  * @author rafae
  */
-public class EventUserList extends EventsUserListView{
-    
-    public EventUserList()
+public class ModifyProfile extends ModifyProfileView{
+
+    public ModifyProfile()
     {
-    
         super();
+    }
+    
+    @Override
+    protected void modify() {
         
     }
 
     @Override
     protected void back() {
         this.setVisible(false);
-    }
-
-    @Override
-    protected void modifyEvent() {
-        ModifyEvent s = new ModifyEvent();
-        s.setVisible(true);
     }
     
 }

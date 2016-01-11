@@ -4,6 +4,9 @@ import GUI.CreateAccountView;
 import GUI.ErrorLogin;
 import GUI.LoginView;
 import java.awt.event.MouseAdapter;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Login extends LoginView {
     Users users;
@@ -19,7 +22,6 @@ public class Login extends LoginView {
             MainMenu menuWindow = new MainMenu(username);
             menuWindow.setVisible(true);
             this.setVisible(false);
-            this.dispose();
             return true;
         }
         else{ 
@@ -27,7 +29,8 @@ public class Login extends LoginView {
             ErrorLogin menuWindow = new ErrorLogin();
             menuWindow.setVisible(true);
             
-            this.setVisible(true);
+            
+            
             
             return false;
         }

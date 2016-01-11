@@ -1,6 +1,6 @@
 package WarmCoffee;
 
-import GUI.CreateEvent;
+import GUI.CreateEventView;
 import GUI.LoginView;
 import GUI.MainMenuView;
 
@@ -9,6 +9,7 @@ public class MainMenu extends MainMenuView {
     public MainMenu(String username) {
         super();
         this.username=username;
+        this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     }
 
     @Override
@@ -16,16 +17,12 @@ public class MainMenu extends MainMenuView {
         
         EventsList s = new EventsList(username);
         s.setVisible(true);
-        this.setVisible(false);
-        this.dispose();
     }
 
     @Override
     protected void showSectors() {
         SectorsList s = new SectorsList();
         s.setVisible(true);
-        this.setVisible(false);
-        this.dispose();
     }
 
     @Override
@@ -35,21 +32,21 @@ public class MainMenu extends MainMenuView {
         Login s = new Login(n);
         s.setVisible(true);
         this.setVisible(false);
-        this.dispose();
     }
 
     @Override
     protected void showMyEvents() {
         EventUserList s = new EventUserList();
         s.setVisible(true);
-        this.setVisible(false);
-        this.dispose();
     
     }
 
     @Override
-    protected void showMySectors() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    protected void showMyReservations() {
+    
+        ReservationUserList s = new ReservationUserList();
+        s.setVisible(true);
+        
     }
 
     @Override
@@ -57,9 +54,15 @@ public class MainMenu extends MainMenuView {
     
         CreateEvent s = new CreateEvent();
         s.setVisible(true);
-        this.setVisible(false);
-        this.dispose();
     
+    }
+
+    @Override
+    protected void modifyProfile() {
+     
+        ModifyProfile s = new ModifyProfile();
+        s.setVisible(true);
+        
     }
 
 }

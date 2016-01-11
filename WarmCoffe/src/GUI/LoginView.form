@@ -274,7 +274,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="en tu cuenta de WarmCoffe"/>
+                <Property name="text" type="java.lang.String" value="en tu cuenta de WarmCoffee"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -316,7 +316,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Warm Coffe"/>
+                <Property name="text" type="java.lang.String" value="Warm Coffee"/>
               </Properties>
             </Component>
           </SubComponents>

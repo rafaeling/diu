@@ -23,10 +23,7 @@ public class EventsList extends EventsListView{
     @Override
     protected void back() {
         
-        MainMenu menuWindow = new MainMenu(username);
-        menuWindow.setVisible(true);
         this.setVisible(false);
-        this.dispose();
         
     }
     
