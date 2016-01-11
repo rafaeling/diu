@@ -31,5 +31,10 @@ public class EventUserList extends EventsUserListView{
         s.setVisible(true);
         
     }
+
+    @Override
+    protected void eliminar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
