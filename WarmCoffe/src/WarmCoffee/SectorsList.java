@@ -14,11 +14,13 @@ import GUI.SectorsListView;
 public class SectorsList extends SectorsListView{
     
     String username;
+    Sectors sectors;
     
-    public SectorsList()
+    public SectorsList(String username,Sectors sectors)
     {
         super();
-        this.username = "";
+        this.username = username;
+        this.sectors=sectors;
     }
 
     @Override
@@ -27,15 +29,16 @@ public class SectorsList extends SectorsListView{
         this.setVisible(false);
     }
 
-    @Override
-    protected void reservar() {
-        
-    
-    }
+
 
     @Override
     protected void buscar() {
     
+    }
+
+    @Override
+    protected void reservar(String from, String to, String day, String month) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

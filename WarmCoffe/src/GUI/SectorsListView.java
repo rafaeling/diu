@@ -22,8 +22,6 @@ public abstract class SectorsListView extends javax.swing.JFrame {
         fillParametres();
         
         
-        
-        
     }
 
     
@@ -34,43 +32,43 @@ public abstract class SectorsListView extends javax.swing.JFrame {
         for(int i = 0 ; i < 4 ; i++)
         {
             
-            this.jComboBox1.removeItemAt(0);
-            this.jComboBox2.removeItemAt(0);
-            this.jComboBox3.removeItemAt(0);
-            this.jComboBox4.removeItemAt(0);
+            this.day.removeItemAt(0);
+            this.from.removeItemAt(0);
+            this.to.removeItemAt(0);
+            this.month.removeItemAt(0);
         
         }
         
         for(int i = 1; i <= 31; i++)
         {
-            this.jComboBox1.addItem(Integer.toString(i));
+            this.day.addItem(Integer.toString(i));
         }
         
         //HORAS
-        this.jComboBox2.addItem("09:30");
+        this.from.addItem("09:30");
             
-        this.jComboBox3.addItem("09:30");
+        this.to.addItem("09:30");
         
         for(int i = 10 ; i < 22 ; i++)
         {
            
-            this.jComboBox2.addItem(i+":30");
+            this.from.addItem(i+":30");
             
-            this.jComboBox3.addItem(i+":30");
+            this.to.addItem(i+":30");
         }
         
-        this.jComboBox4.addItem("Enero");
-        this.jComboBox4.addItem("Febrero");
-        this.jComboBox4.addItem("Marzo");
-        this.jComboBox4.addItem("Abril");
-        this.jComboBox4.addItem("Mayo");
-        this.jComboBox4.addItem("Junio");
-        this.jComboBox4.addItem("Julio");
-        this.jComboBox4.addItem("Agosto");
-        this.jComboBox4.addItem("Septiembre");
-        this.jComboBox4.addItem("Octubre");
-        this.jComboBox4.addItem("Noviembre");
-        this.jComboBox4.addItem("Diciembre");
+        this.month.addItem("Enero");
+        this.month.addItem("Febrero");
+        this.month.addItem("Marzo");
+        this.month.addItem("Abril");
+        this.month.addItem("Mayo");
+        this.month.addItem("Junio");
+        this.month.addItem("Julio");
+        this.month.addItem("Agosto");
+        this.month.addItem("Septiembre");
+        this.month.addItem("Octubre");
+        this.month.addItem("Noviembre");
+        this.month.addItem("Diciembre");
         
         
         
@@ -78,7 +76,7 @@ public abstract class SectorsListView extends javax.swing.JFrame {
     }
     
     protected abstract void back();
-    protected abstract void reservar();
+    protected abstract void reservar(String from, String to, String day, String month);
     protected abstract void buscar();
     
     
@@ -97,12 +95,12 @@ public abstract class SectorsListView extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        day = new javax.swing.JComboBox<String>();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        from = new javax.swing.JComboBox<String>();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        to = new javax.swing.JComboBox<String>();
+        month = new javax.swing.JComboBox<String>();
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -140,19 +138,24 @@ public abstract class SectorsListView extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Yu Gothic Light", 0, 12)); // NOI18N
         jLabel1.setText("Dia");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        day.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic Light", 0, 12)); // NOI18N
         jLabel2.setText("Desde:");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        from.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        from.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fromActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic Light", 0, 12)); // NOI18N
         jLabel3.setText("Hasta:");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        to.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        month.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setFont(new java.awt.Font("Yu Gothic Light", 0, 12)); // NOI18N
         jLabel4.setText("Mes");
@@ -165,19 +168,19 @@ public abstract class SectorsListView extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(from, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(to, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(day, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(31, 31, 31)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(month, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -191,10 +194,10 @@ public abstract class SectorsListView extends javax.swing.JFrame {
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(day, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(from, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(to, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(month, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -227,6 +230,7 @@ public abstract class SectorsListView extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Yu Gothic Light", 0, 12)); // NOI18N
         jButton3.setText("Buscar");
+        jButton3.setEnabled(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -332,23 +336,31 @@ public abstract class SectorsListView extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            this.reservar(); // TODO add your handling code here:
+        String desde=from.getSelectedItem().toString();
+        String hasta=to.getSelectedItem().toString();
+        String dia=day.getSelectedItem().toString();
+        String mes=month.getSelectedItem().toString();
+        
+        
+        this.reservar(desde,hasta,dia,mes); // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         this.buscar();
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void fromActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fromActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fromActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> day;
+    private javax.swing.JComboBox<String> from;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -359,8 +371,12 @@ public abstract class SectorsListView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JComboBox<String> month;
     private java.awt.Panel panel2;
     private GUI.SectorView sectorView1;
     private GUI.SectorView sectorView2;
+    private javax.swing.JComboBox<String> to;
     // End of variables declaration//GEN-END:variables
+
+
 }

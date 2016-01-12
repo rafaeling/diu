@@ -5,7 +5,7 @@ package WarmCoffee;
 import java.util.HashMap;
 
 public class Events {
-        HashMap<Integer,Event> eventList;
+        public HashMap<Integer,Event> eventList;
         int currentId;
 	public Events() {
         this.eventList = new HashMap<>();
@@ -18,6 +18,9 @@ public class Events {
         }
         public Event getEvent(int id){
             return eventList.get(id);
+        }
+        public int getSize(){
+            return eventList.size();
         }
 
 }

@@ -15,21 +15,12 @@ public class EventUserList extends EventsUserListView{
     
     public EventUserList()
     {
-    
         super();
-        
     }
 
     @Override
     protected void back() {
         this.setVisible(false);
-    }
-
-    @Override
-    protected void modifyEvent() {
-        ModifyEvent s = new ModifyEvent();
-        s.setVisible(true);
-        
     }
 
     @Override

@@ -12,8 +12,12 @@ package WarmCoffee;
 public class WarmCoffee {
     public static void main(String[] args) {
         Users users=new Users();
+        Events events=new Events();
+        int evId=events.addEvent(new Event("Evento de prueba","un evento muy bonito",18,3));
         users.addUser("arthur","dontpanic","mymail"); //usuario de prueba
-        Login loginWindow=new Login(users);
+        users.getUser("arthur").assistEvent(evId);
+        
+        Login loginWindow=new Login(users,events);
         loginWindow.setVisible(true);
     }
 

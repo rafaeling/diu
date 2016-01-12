@@ -9,20 +9,18 @@ package WarmCoffee;
  *
  * @author andres Ortiz
  */
-class Event {
+public class Event {
     public String name;
     public String description;
     public int plazas;
     public int available;
     public int sector;
-    public String owner;
-    public Event(String name,String description,int plazas,int sector,String owner){
+    public Event(String name,String description,int plazas,int sector){
         this.name=name;
         this.description=description;
         this.plazas=plazas;
         this.sector=sector;
         this.available=plazas;
-        this.owner=owner;
     }
     
 }

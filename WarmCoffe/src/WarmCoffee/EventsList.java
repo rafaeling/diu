@@ -6,6 +6,8 @@
 package WarmCoffee;
 
 import GUI.EventsListView;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  *
@@ -20,6 +22,7 @@ public class EventsList extends EventsListView{
         super();
         this.username = name;
         this.events=events;
+        setEvents();
     }
     
     @Override
@@ -31,7 +34,16 @@ public class EventsList extends EventsListView{
 
     @Override
     protected void asistire() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      
+    }
+    
+    private void setEvents(){
+       Collection<Event> eventList= events.eventList.values();
+        for(Event ev:eventList){
+            this.addEvent(ev);
+        }
+        this.refreshEvents();
+        
     }
     
 }

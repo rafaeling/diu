@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import WarmCoffee.Event;
 import java.awt.Container;
 import java.util.ArrayList;
 
@@ -24,13 +25,14 @@ public abstract class EventsListView extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         
-        this.events = new ArrayList<EventView> ();
+        this.events = new ArrayList<EventView> ();    
         
-        this.events.add(new EventView());
-        this.events.add(new EventView());
-        this.events.add(new EventView());
-        
-        int  x = 10;
+    }
+    public void addEvent(Event event){
+        this.events.add(new EventView(event));
+    }
+    public void refreshEvents(){
+         int  x = 10;
         
         for(EventView t : events)
         {
@@ -86,6 +88,7 @@ public abstract class EventsListView extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Yu Gothic Light", 0, 12)); // NOI18N
         jButton1.setText("Asistiré");
+        jButton1.setEnabled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

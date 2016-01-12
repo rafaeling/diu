@@ -13,23 +13,31 @@ import GUI.CreateEventView;
  */
 public class CreateEvent extends CreateEventView{
 
-    CreateEvent()
+    Events events;
+    User user;
+    MainMenu menu;
+    CreateEvent(Events events,User user,MainMenu menu)
     {
         super();
+        this.events=events;
+        this.user=user;
+        this.menu=menu;
     }
-    
-    @Override
-    protected void createEvent() {
-    
-        
-        
-    }
+
 
     @Override
     protected void back() {
     
         this.setVisible(false);
         
+    }
+
+    @Override
+    protected void createEvent(String name, String description, int participants, int sector) {
+       Event ev=new Event(name,description,participants,sector);
+       user.assistEvent(events.addEvent(ev));
+       menu.refreshEvents();
+       this.setVisible(false);
     }
     
 }

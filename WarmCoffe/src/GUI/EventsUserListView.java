@@ -35,6 +35,7 @@ public abstract class EventsUserListView extends javax.swing.JFrame {
         
         this.events = new ArrayList<EventUserView> ();
         
+       /* this.events.add(new EventUserView());
         this.events.add(new EventUserView());
         this.events.add(new EventUserView());
         this.events.add(new EventUserView());
@@ -42,8 +43,7 @@ public abstract class EventsUserListView extends javax.swing.JFrame {
         this.events.add(new EventUserView());
         this.events.add(new EventUserView());
         this.events.add(new EventUserView());
-        this.events.add(new EventUserView());
-        this.events.add(new EventUserView());
+        this.events.add(new EventUserView());*/
         
         int  x = 10;
         
@@ -64,7 +64,6 @@ public abstract class EventsUserListView extends javax.swing.JFrame {
     
   }
     protected abstract void back();
-    protected abstract void modifyEvent();
     protected abstract void eliminar();
     
     
@@ -84,7 +83,6 @@ public abstract class EventsUserListView extends javax.swing.JFrame {
         panel2 = new java.awt.Panel();
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         panel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -133,15 +131,6 @@ public abstract class EventsUserListView extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Yu Gothic Light", 0, 12)); // NOI18N
-        jButton2.setText("Modificar");
-        jButton2.setBorderPainted(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         jButton3.setFont(new java.awt.Font("Yu Gothic Light", 0, 12)); // NOI18N
         jButton3.setText("Eliminar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -158,20 +147,17 @@ public abstract class EventsUserListView extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
                 .addComponent(jButton3)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -215,10 +201,6 @@ public abstract class EventsUserListView extends javax.swing.JFrame {
         this.back();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.modifyEvent(); // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         this.eliminar();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -232,7 +214,6 @@ public abstract class EventsUserListView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

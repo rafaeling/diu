@@ -14,13 +14,13 @@ import java.util.ArrayList;
 public class User {
     public String pass;
     public String email;
-    public ArrayList<Integer> events;
+    public ArrayList<Integer> events=new ArrayList<>();
     public User(String pass,String email){
         this.pass=pass;
         this.email=email;
     }
     public void assistEvent(int eventId){
-        events.add(eventId);
+       if(events.contains(eventId)==false) events.add(eventId);
     }
     
 }

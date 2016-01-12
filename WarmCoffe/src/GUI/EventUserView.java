@@ -23,8 +23,11 @@ public class EventUserView extends javax.swing.JPanel {
     /**
      * Creates new form EventUserView
      */
-    public EventUserView() {
+    public EventUserView(String name,String description,int sector) {
         initComponents();
+        nameField.setText(name);
+        descriptionField.setText(description);
+        sectorField.setText(String.valueOf(sector));
     }
        
         
@@ -41,9 +44,9 @@ public class EventUserView extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        nameField = new javax.swing.JLabel();
+        descriptionField = new javax.swing.JLabel();
+        sectorField = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(135, 135, 135));
         jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -64,14 +67,14 @@ public class EventUserView extends javax.swing.JPanel {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Sector Evento:");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel4.setText("Lo que sea");
+        nameField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        nameField.setText("Lo que sea");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel5.setText("Lo que sea");
+        descriptionField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        descriptionField.setText("Lo que sea");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel6.setText("Lo que sea");
+        sectorField.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        sectorField.setText("Lo que sea");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -83,15 +86,15 @@ public class EventUserView extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4))
+                        .addComponent(nameField))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5))
+                        .addComponent(descriptionField))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6)))
+                        .addComponent(sectorField)))
                 .addContainerGap(248, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -100,15 +103,15 @@ public class EventUserView extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel4))
+                    .addComponent(nameField))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jLabel5))
+                    .addComponent(descriptionField))
                 .addGap(11, 11, 11)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel6))
+                    .addComponent(sectorField))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -154,12 +157,12 @@ public class EventUserView extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel descriptionField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel nameField;
+    private javax.swing.JLabel sectorField;
     // End of variables declaration//GEN-END:variables
 }
