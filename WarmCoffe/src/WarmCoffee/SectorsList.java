@@ -13,14 +13,14 @@ import GUI.SectorsListView;
  */
 public class SectorsList extends SectorsListView{
     
-    String username;
-    Sectors sectors;
+    User user;
+    MainMenu menu;
     
-    public SectorsList(String username,Sectors sectors)
+    public SectorsList(User user,MainMenu menu)
     {
         super();
-        this.username = username;
-        this.sectors=sectors;
+        this.user = user;
+        this.menu=menu;
     }
 
     @Override
@@ -38,7 +38,9 @@ public class SectorsList extends SectorsListView{
 
     @Override
     protected void reservar(String from, String to, String day, String month) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        user.reserveSector(new Sector(from,to,day,month));
+        menu.refreshSectors();
+        this.setVisible(false);
     }
     
 }

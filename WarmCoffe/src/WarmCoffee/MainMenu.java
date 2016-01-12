@@ -11,18 +11,16 @@ public class MainMenu extends MainMenuView {
     Users users;
     Events events;
     Login login;
-    Sectors sectors;
-    public MainMenu(String username,Users users,Login l,Events events,Sectors sectors) {
+    public MainMenu(String username,Users users,Login l,Events events) {
         super();
         this.username=username;
         this.users=users;
         this.user=users.getUser(username);
         this.login=l;
         this.events=events;
-        this.sectors=sectors;
         refreshUser(username,user.email);
-        
         refreshEvents();
+        refreshSectors();
         this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
        
     }
@@ -36,7 +34,7 @@ public class MainMenu extends MainMenuView {
 
     @Override
     protected void showSectors() {
-        SectorsList s = new SectorsList(this.username,this.sectors);
+        SectorsList s = new SectorsList(this.user,this);
         s.setVisible(true);
     }
 
@@ -90,6 +88,14 @@ public class MainMenu extends MainMenuView {
         for(int i:userEvents){
             Event ev=events.getEvent(i);
             this.addEvent(count,ev.name,ev.sector,"12/01/2016");
+            count++;
+        }
+    }
+    public void refreshSectors(){
+        ArrayList<Sector> userSectors=user.sectors;
+        int count=0;
+        for(Sector sector:userSectors){
+            this.addSector(count, sector.id, sector.from, sector.day);
             count++;
         }
     }
